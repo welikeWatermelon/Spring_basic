@@ -9,6 +9,7 @@ import hello.core.member.MemberServiceImpl;
 import hello.core.member.MemoryMemberRepository;
 import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImpl;
+import hello.core.singleton.StatefulService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -40,4 +41,9 @@ public class AppConfig {
         // 유지보수가 쉬워진다!!
 
     }
+
+//    @Bean
+//    public StatefulService statefulService() {
+//        return new StatefulService();
+//    }
 }
