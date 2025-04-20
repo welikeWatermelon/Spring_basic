@@ -1,5 +1,9 @@
 package hello.core.member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberServiceImpl implements MemberService{
 
     //    private final MemberRepository memberRepository = new MemoryMemberRepository();
@@ -9,6 +13,7 @@ public class MemberServiceImpl implements MemberService{
     // 얘가 대신 생성해주는거지
     // 즉, 맨처음 이 클래스를 생성할 때, 만들어 줄 수 있음
     // AppConfig가 생성한 객체 인스턴스의 참조를 생성자를 통해서 주입해주는 것
+    @Autowired
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
